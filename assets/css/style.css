@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
 .images img{
     width: calc(100% / 6);
     border: 1px solid white;
@@ -14,7 +16,12 @@
     width: 80%;
     margin: 3rem auto;
 }
-
+.team_p{
+    width: 60%;
+    margin: 2rem auto;
+    font-weight: bolder;
+    font-size: medium;
+}
 .card_img{
     max-width: 100%;
 }
