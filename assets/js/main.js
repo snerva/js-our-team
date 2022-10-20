@@ -63,12 +63,12 @@ for(let i=0; i< teamMembers.length; i++){
 
     //BONUS 2 realizzare delle card con i membri del team
     const memberCardMarkup = `
-    <div class="card col text-bg-dark">
-         <img class="card_img" src="./assets/img/${thisTeam.image}" alt="">
-         <div class="info_card text-center p-3">
+    <div class="card border-0 col p-3 ">
+        <img class="card_img" src="./assets/img/${thisTeam.image}" alt="">
+        <div class="info_card text-bg-dark text-center p-3">
              <h3>${thisTeam.name}</h3>
              <p>${thisTeam.role}</p>
-         </div>
+        </div>
     </div>
     `
     cardsDomEl.insertAdjacentHTML('beforeend', memberCardMarkup);
