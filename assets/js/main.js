@@ -7,6 +7,7 @@ BONUS 2: Organizzare i singoli membri in card/schede*/
 
 const domEl = document.querySelector('.info_strings');
 const imgDomEl = document.querySelector('.images');
+const cardsDomEl = document.querySelector('.row');
 //creo una variabile const teamMembers con un array di oggetti = [{name:, role:, image: "img/..."}]
 const teamMembers = [
     {
@@ -58,5 +59,18 @@ for(let i=0; i< teamMembers.length; i++){
     //BONUS 1 trasformo la stringa foto in un immagine effettiva e mostro in DOM
     let imageMarkup = `<img src="./assets/img/${thisTeam.image}" alt="">`;
     imgDomEl.insertAdjacentHTML('beforeend', imageMarkup)
+
+
+    //BONUS 2 realizzare delle card con i membri del team
+    const memberCardMarkup = `
+    <div class="card col text-bg-dark">
+         <img class="card_img" src="./assets/img/${thisTeam.image}" alt="">
+         <div class="info_card text-center p-3">
+             <h3>${thisTeam.name}</h3>
+             <p>${thisTeam.role}</p>
+         </div>
+    </div>
+    `
+    cardsDomEl.insertAdjacentHTML('beforeend', memberCardMarkup);
 }
 
