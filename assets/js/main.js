@@ -6,37 +6,38 @@ BONUS 1: Trasformare la stringa foto in una immagine effettiva
 BONUS 2: Organizzare i singoli membri in card/schede*/
 
 const domEl = document.querySelector('.info_strings');
+const imgDomEl = document.querySelector('.images');
 //creo una variabile const teamMembers con un array di oggetti = [{name:, role:, image: "img/..."}]
 const teamMembers = [
     {
-        Name: ' Wayne Barnett ',
-        Role: ' Founder & CEO ',
-        Image: ' wayne-barnett-founder-ceo.jpg '
+        name: ' Wayne Barnett ',
+        role: ' Founder & CEO ',
+        image: 'wayne-barnett-founder-ceo.jpg'
     },
     {
-        Name: ' Angela Caroll ',
-        Role: ' Chief Editor ',
-        Image: ' angela-caroll-chief-editor.jpg '
+        name: ' Angela Caroll ',
+        role: ' Chief Editor ',
+        image: 'angela-caroll-chief-editor.jpg'
     },
     {
-        Name: ' Walter Gordon ',
-        Role: ' Office Manager ',
-        Image: ' walter-gordon-office-manager.jpg '
+        name: ' Walter Gordon ',
+        role: ' Office Manager ',
+        image: 'walter-gordon-office-manager.jpg'
     },
     {
-        Name: ' Angela Lopez ',
-        Role: ' Social Media Manager ',
-        Image: ' angela-lopez-social-media-manager.jpg '
+        name: ' Angela Lopez ',
+        role: ' Social Media Manager ',
+        image: 'angela-lopez-social-media-manager.jpg'
     },
     {
-        Name: ' Scott Estrada ',
-        Role: ' Developer ',
-        Image: ' scott-estrada-developer.jpg '
+        name: ' Scott Estrada ',
+        role: ' Developer ',
+        image: 'scott-estrada-developer.jpg'
     },
     {
-        Name: ' Barbara Ramos ',
-        Role: ' Graphic Designer ',
-        Image: ' barbara-ramos-graphic-designer.jpg '
+        name: ' Barbara Ramos ',
+        role: ' Graphic Designer ',
+        image: 'barbara-ramos-graphic-designer.jpg'
     }
 ]
 
@@ -45,14 +46,17 @@ const teamMembers = [
 for(let i=0; i< teamMembers.length; i++){
     let thisTeam = teamMembers[i];
     console.log(thisTeam);
-    
+
     //creo un elemento in dom per stampare le informazioni richieste e le stampo come stringa inserendo spazi vuoti giá nelle stringhe Name: ' Wayne Barnett ', punteggiatura e a capo domEl.insertAdjacentHTML('beforeend', (key + ':' + value +'<br>'))
     for (const key in thisTeam) {
         let value = thisTeam[key];
         console.log(key + ':' + value);
-        domEl.insertAdjacentHTML('beforeend', (''+ key + ':' + value +'<br>')) 
-    }
+        domEl.insertAdjacentHTML('beforeend', (key + ':' + ' ' + value +'<br>')) 
+    }  
 
+
+    //BONUS 1 trasformo la stringa foto in un immagine effettiva e mostro in DOM
+    let imageMarkup = `<img src="./assets/img/${thisTeam.image}" alt="">`;
+    imgDomEl.insertAdjacentHTML('beforeend', imageMarkup)
 }
-
 
