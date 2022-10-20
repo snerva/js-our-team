@@ -6,6 +6,13 @@ BONUS 1: Trasformare la stringa foto in una immagine effettiva
 BONUS 2: Organizzare i singoli membri in card/schede*/
 
 //creo una variabile const teamMembers con un array di oggetti = [{name:, role:, image: "img/..."}]
+const teamMembers = [
+    {
+        Name: ' Wayne Barnett ',
+        Role: ' Founder & CEO ',
+        Image: ' angela-caroll-chief-editor.jpg '
+    },
+]
 
 //ciclo con forin in teamMembers per stampare le info richieste for (const key in teamMembers) { console.log(key, teamMembers[key]);}
 
